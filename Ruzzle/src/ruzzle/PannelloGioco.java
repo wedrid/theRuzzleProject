@@ -19,7 +19,7 @@ public class PannelloGioco extends JPanel{
     public PannelloGioco(){
         
         Random r = new Random();
-        int j = 0;
+        int j = 0, k = 1;
         char[] caratteri = new char[16];
         for(int i = 0; i<16; i++){
             caratteri[i] = (char)(r.nextInt(26) + 'A');
@@ -32,9 +32,10 @@ public class PannelloGioco extends JPanel{
             for(int row = 0; row <4; row++){
                 Ruzzle.matrix[column][row] = new PulsantiLettere(caratteri[j]);
                 this.add(Ruzzle.matrix[column][row]);
-                Ruzzle.matrix[column][row].ID = j;
+                Ruzzle.matrix[column][row].ID = k;
                 System.out.println(Ruzzle.matrix[column][row].ID);
                 j++;
+                k++;
             }
         }
         

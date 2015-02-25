@@ -53,8 +53,10 @@ public class ListenerTrascinamento implements MouseListener{
         PulsantiLettere pulsante = (PulsantiLettere) e.getSource();
         //Controlla se è già passato da un pulsante
         for(int i = 0; i<16; i++){
-            if(pulsante.ID == IDKeeper[i])
+            if(pulsante.ID == IDKeeper[i]){
+                System.out.println("Fora!");
                 return;
+            }
         }
         if(pressed == true){
             Ruzzle.caratteriPresi[contatore] = pulsante.getText();
@@ -68,6 +70,16 @@ public class ListenerTrascinamento implements MouseListener{
 
     @Override
     public void mouseExited(MouseEvent e) {
+        
+        PulsantiLettere pulsante = (PulsantiLettere) e.getSource();
+        
+        for(int i = 0; i<16; i++){
+            if(pulsante.ID == IDKeeper[i]){
+                System.out.println("Fora!");
+                return;
+            }
+        }
+        IDKeeper[contatore] = pulsante.ID;
         contatore++;
         
     }
