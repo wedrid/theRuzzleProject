@@ -32,6 +32,8 @@ public class PannelloGioco extends JPanel{
             for(int row = 0; row <4; row++){
                 Ruzzle.matrix[column][row] = new PulsantiLettere(caratteri[j]);
                 this.add(Ruzzle.matrix[column][row]);
+                Ruzzle.matrix[column][row].ID = j;
+                System.out.println(Ruzzle.matrix[column][row].ID);
                 j++;
             }
         }
