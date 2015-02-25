@@ -5,6 +5,8 @@
  */
 package ruzzle;
 
+import javax.swing.Box;
+import javax.swing.BoxLayout;
 import javax.swing.JFrame;
 
 /**
@@ -13,14 +15,20 @@ import javax.swing.JFrame;
  */
 public class Finestra extends JFrame{
     
+    
+    
     public Finestra(){
-        Ruzzle.pannello = new Pannello();
+        Ruzzle.genLayout = new PannelloLayoutGenerale();
         this.setTitle("Ruzzello");
         this.setSize(700, 700);
         this.setLocation(50, 50);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.add(new Pannello());
+        
+        this.add(Ruzzle.genLayout);
         this.setResizable(false);
+        
+        
+        //this.setUndecorated(true);
         
         
         this.setVisible(true);

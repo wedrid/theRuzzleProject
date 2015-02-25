@@ -12,6 +12,7 @@ import javax.swing.JButton;
  * @author grappolini.edoardo
  */
 public class PulsantiLettere extends JButton{
+    int ID = 0;
     public PulsantiLettere(char c){
         
             this.setText(""+c);

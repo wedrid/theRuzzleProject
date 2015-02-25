@@ -18,6 +18,7 @@ public class ListenerTrascinamento implements MouseListener{
     static boolean pressed = false;
     static int contatore = 0;
     String stringa = null;
+    static int[] IDKeeper = new int[16];
     
     @Override
     public void mouseClicked(MouseEvent e) {
@@ -26,9 +27,11 @@ public class ListenerTrascinamento implements MouseListener{
 
     @Override
     public void mousePressed(MouseEvent e) {
+        for(int i = 0; i<16; i++)
+            IDKeeper[i] = 0;
         contatore = 0;
         pressed = true;
-        JButton pulsante = (JButton) e.getSource();
+        PulsantiLettere pulsante = (PulsantiLettere) e.getSource();
         Ruzzle.caratteriPresi[contatore] = pulsante.getText();
         System.out.println("Carattere: " + Ruzzle.caratteriPresi[contatore]);
         contatore++;
