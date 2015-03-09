@@ -5,6 +5,8 @@
  */
 package ruzzle;
 
+import javax.swing.JLabel;
+import javax.swing.JPanel;
 import javax.swing.UIManager;
 
 /**
@@ -23,14 +25,20 @@ public class Ruzzle {
     
     public static PannelloLayoutGenerale genLayout;
     
+    public static JLabel lettera;
+    
+    public static String parola = new String();
+    
+    public static JLabel labelParola = new JLabel();
+    
     
     public static void main(String[] args) {
         
-        try {
+        /*try {
             UIManager.setLookAndFeel("com.seaglasslookandfeel.SeaGlassLookAndFeel");
         } catch (Exception e) {
             e.printStackTrace();
-        }
+        }*/
         
         matrix = new PulsantiLettere[4][4];
         

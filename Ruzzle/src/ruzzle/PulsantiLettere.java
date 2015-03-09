@@ -43,7 +43,7 @@ public class PulsantiLettere extends JButton{
             this.addMouseListener(listener);
         }
     
-    public void paintComponent(Graphics g){
+    /*public void paintComponent(Graphics g){
         Graphics2D graph2 = (Graphics2D)g;
         graph2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
         /* UTILIZZA TROPPE RISORSE
@@ -55,7 +55,7 @@ public class PulsantiLettere extends JButton{
         g.drawImage(img, 0, 0, this.getHeight(), this.getWidth(), this);
         
         */
-        
+        /*
         Shape rettangoloArrotondato = new RoundRectangle2D.Double(0, 0, this.getWidth(), this.getHeight(), 45, 45);
         graph2.setColor(Color.BLUE);
         graph2.fill(rettangoloArrotondato);
@@ -66,5 +66,5 @@ public class PulsantiLettere extends JButton{
         
         graph2.drawString("" + carattere, this.getHeight()/2-7, this.getWidth()/2+7);
         
-    }
+    }*/
 }

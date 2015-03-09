@@ -24,8 +24,10 @@ public class Finestra extends JFrame{
         this.setLocation(50, 50);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
+        
         this.add(Ruzzle.genLayout);
         this.setResizable(false);
+        
         
         
         //this.setUndecorated(true);

@@ -19,7 +19,7 @@ public class PannelloLayoutGenerale extends JPanel{
         Ruzzle.pannelloGioco = new PannelloGioco();
         this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
         this.add(Ruzzle.pannelloGioco);
-        
+        this.add(new PannelloBasso());
     
     
     }
