@@ -27,6 +27,8 @@ import javax.swing.JButton;
  */
 public class PulsantiLettere extends JButton{
     public int ID = 0;
+    public int row = 0;
+    public int column = 0;
     private char carattere;
     public PulsantiLettere(char c){
             //ImageIcon iconaPulsante = new ImageIcon("pulsante.png");

@@ -5,6 +5,7 @@
  */
 package ruzzle;
 
+import java.awt.Color;
 import java.awt.GridLayout;
 import static java.awt.SystemColor.window;
 import javax.swing.JButton;
@@ -27,7 +28,10 @@ public class PannelloGioco extends JPanel{
         
         this.setLayout(new GridLayout(4, 4, 30, 30));
         //this.setSize(600, 600);
+        this.setBackground(Color.GREEN);
         
+        
+        //QUI!!! Metto gli ID ai pulsanti
         for(int column = 0; column <4; column++){
             for(int row = 0; row <4; row++){
                 Ruzzle.matrix[column][row] = new PulsantiLettere(caratteri[j]);
@@ -36,6 +40,8 @@ public class PannelloGioco extends JPanel{
                 System.out.println(Ruzzle.matrix[column][row].ID);
                 j++;
                 k++;
+                Ruzzle.matrix[column][row].row = row;
+                Ruzzle.matrix[column][row].column = column;
             }
         }
         

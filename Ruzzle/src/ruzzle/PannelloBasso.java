@@ -20,7 +20,7 @@ public class PannelloBasso extends JPanel{
         Ruzzle.lettera = new JLabel();
         Ruzzle.lettera.setText("Lettera");
         Ruzzle.labelParola.setText("Parola");
-        this.setBackground(Color.YELLOW);
+        this.setBackground(Color.PINK);
         this.add(Ruzzle.lettera);
         this.add(Ruzzle.labelParola);
     

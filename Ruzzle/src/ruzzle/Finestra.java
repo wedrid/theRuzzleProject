@@ -26,11 +26,11 @@ public class Finestra extends JFrame{
         
         
         this.add(Ruzzle.genLayout);
-        this.setResizable(false);
+        //this.setResizable(false);
         
         
         
-        //this.setUndecorated(true);
+        this.setUndecorated(true);
         
         
         this.setVisible(true);
