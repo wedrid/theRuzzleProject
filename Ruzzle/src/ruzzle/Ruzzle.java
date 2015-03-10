@@ -31,8 +31,12 @@ public class Ruzzle {
     
     public static JLabel labelParola = new JLabel();
     
+    public static JLabel labelTempo = new JLabel();
     
     public static void main(String[] args) {
+        
+        Thread tempo = new Thread(new ThreadCountDown());
+        tempo.start();
         
         /*try {
             UIManager.setLookAndFeel("com.seaglasslookandfeel.SeaGlassLookAndFeel");

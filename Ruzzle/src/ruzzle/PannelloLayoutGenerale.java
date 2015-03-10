@@ -15,6 +15,7 @@ import javax.swing.JPanel;
  */
 public class PannelloLayoutGenerale extends JPanel{
     PannelloLayoutGenerale(){
+        this.add(Ruzzle.labelTempo);
         
         Ruzzle.pannelloGioco = new PannelloGioco();
         this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));

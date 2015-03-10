@@ -30,7 +30,7 @@ public class Finestra extends JFrame{
         
         
         
-        this.setUndecorated(true);
+        //this.setUndecorated(true);
         
         
         this.setVisible(true);
