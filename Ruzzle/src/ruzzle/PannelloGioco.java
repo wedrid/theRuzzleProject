@@ -26,14 +26,14 @@ public class PannelloGioco extends JPanel{
             caratteri[i] = (char)(r.nextInt(26) + 'A');
         }
         
-        this.setLayout(new GridLayout(4, 4, 30, 30));
+        this.setLayout(new GridLayout(Ruzzle.colonne, Ruzzle.righe, 30, 30));
         //this.setSize(600, 600);
-        this.setBackground(Color.GREEN);
+        this.setBackground(Color.GRAY);
         
         
         //QUI!!! Metto gli ID ai pulsanti
-        for(int column = 0; column <4; column++){
-            for(int row = 0; row <4; row++){
+        for(int column = 0; column < Ruzzle.colonne; column++){
+            for(int row = 0; row < Ruzzle.righe; row++){
                 Ruzzle.matrix[column][row] = new PulsantiLettere(caratteri[j]);
                 this.add(Ruzzle.matrix[column][row]);
                 Ruzzle.matrix[column][row].ID = k;
@@ -42,6 +42,7 @@ public class PannelloGioco extends JPanel{
                 k++;
                 Ruzzle.matrix[column][row].row = row;
                 Ruzzle.matrix[column][row].column = column;
+                Ruzzle.matrix[column][row].setBackground(Color.WHITE);
             }
         }
         

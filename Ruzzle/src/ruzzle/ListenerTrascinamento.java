@@ -5,6 +5,7 @@
  */
 package ruzzle;
 
+import java.awt.Color;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import static java.lang.Math.abs;
@@ -40,6 +41,7 @@ public class ListenerTrascinamento implements MouseListener{
         Ruzzle.lettera.setText(Ruzzle.caratteriPresi[contatore]);
         Ruzzle.parola = Ruzzle.parola + Ruzzle.caratteriPresi[contatore]; //Crea progressivamente la stringa
        
+        pulsante.setBackground(Color.ORANGE);
         
         IDKeeper[contatore] = pulsante.ID;
         contatore++;
@@ -57,6 +59,11 @@ public class ListenerTrascinamento implements MouseListener{
         }
         System.out.println(Ruzzle.parola);
         Ruzzle.labelParola.setText(Ruzzle.parola);
+        for(int column = 0; column <4; column++){
+            for(int row = 0; row <4; row++){
+                Ruzzle.matrix[column][row].setBackground(Color.WHITE);
+            }
+        }
     }
 
     @Override
@@ -79,6 +86,7 @@ public class ListenerTrascinamento implements MouseListener{
             }
         }
         if(isPressed == true){
+            pulsante.setBackground(Color.ORANGE);
             char c;
             Ruzzle.caratteriPresi[contatore] = pulsante.getText();
             Ruzzle.lettera.setText(pulsante.getText());

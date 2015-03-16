@@ -15,6 +15,8 @@ import java.util.logging.Logger;
  */
 public class ThreadCountDown implements Runnable{
     private int tempo = 0;
+    private int minuti = 0;
+    private int secondi = 0;
     @Override
     public void run() {
         for(tempo = 120; tempo > 0; tempo--){
@@ -23,7 +25,9 @@ public class ThreadCountDown implements Runnable{
             } catch (InterruptedException ex) {
                 Logger.getLogger(ThreadCountDown.class.getName()).log(Level.SEVERE, null, ex);
             }
-            Ruzzle.labelTempo.setText("" + tempo);
+            minuti = tempo/60;
+            secondi = tempo - (minuti*60);
+            Ruzzle.labelTempo.setText("Tempo rimanente: " + minuti + ":" + secondi);
         }
     }
     

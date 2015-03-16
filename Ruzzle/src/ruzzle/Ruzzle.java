@@ -14,10 +14,14 @@ import javax.swing.UIManager;
  * @author grappolini.edoardo
  */
 public class Ruzzle {
+    
+    public static int righe = 4;
+    
+    public static int colonne = 4;
 
     public static String[] caratteriPresi = new String[16];
     
-    public static PulsantiLettere[][] matrix = new PulsantiLettere[5][5];;
+    public static PulsantiLettere[][] matrix = new PulsantiLettere[4][4];;
     
     public static Finestra finestra;
     
@@ -33,9 +37,13 @@ public class Ruzzle {
     
     public static JLabel labelTempo = new JLabel();
     
+    public static Thread tempo;
+    
+    public static int larghezzaFinestra = 700;
+    
     public static void main(String[] args) {
         
-        Thread tempo = new Thread(new ThreadCountDown());
+        tempo = new Thread(new ThreadCountDown());
         tempo.start();
         
         /*try {

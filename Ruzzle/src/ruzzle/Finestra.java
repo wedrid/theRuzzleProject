@@ -20,7 +20,7 @@ public class Finestra extends JFrame{
     public Finestra(){
         Ruzzle.genLayout = new PannelloLayoutGenerale();
         this.setTitle("Ruzzello");
-        this.setSize(700, 700);
+        this.setSize(Ruzzle.larghezzaFinestra, 700);
         this.setLocation(50, 50);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         

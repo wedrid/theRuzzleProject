@@ -10,11 +10,11 @@ import static java.awt.SystemColor.window;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 import java.util.Random;
-
+//CLASSE INUTILIZZATA
 /**
  *
  * @author grappolini.edoardo
- */
+ *//*
 public class Pannello extends JPanel{
     public Pannello(){
         
@@ -44,7 +44,7 @@ public class Pannello extends JPanel{
         
         
     }
-}
+}*/
 
                 
             
