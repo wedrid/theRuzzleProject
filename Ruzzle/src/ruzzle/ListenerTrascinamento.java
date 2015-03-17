@@ -32,6 +32,7 @@ public class ListenerTrascinamento implements MouseListener{
     @Override
     public void mousePressed(MouseEvent e) {
         Ruzzle.parola = "";
+        //Azzero il vettore con gli id in cui si è già passati
         for(int i = 0; i<16; i++)
             IDKeeper[i] = 0;
         contatore = 0;
@@ -70,13 +71,10 @@ public class ListenerTrascinamento implements MouseListener{
     public void mouseEntered(MouseEvent e) {
         PulsantiLettere pulsante = (PulsantiLettere) e.getSource();
         
-        System.out.println("Diff. abs colonna = "+ abs(currentColumn - pulsante.column));
-        System.out.println("Diff. abs riga = "+ abs(currentRow - pulsante.row));
+        //System.out.println("Diff. abs colonna = "+ abs(currentColumn - pulsante.column));
+        //System.out.println("Diff. abs riga = "+ abs(currentRow - pulsante.row));
         //Controllo che l'utente non possa saltare un pulsante
-        if(!(abs(currentColumn - pulsante.column) == 1 || abs(currentColumn - pulsante.column) == 0))
-            return;
-        if(!(abs(currentRow - pulsante.row) == 1 || abs(currentRow - pulsante.row) == 0))
-            return;
+
         
         //Controlla se è già passato da un pulsante, lo controlla anche se !mousePressed ma tanto non importa
         for(int i = 0; i<16; i++){
@@ -86,11 +84,19 @@ public class ListenerTrascinamento implements MouseListener{
             }
         }
         if(isPressed == true){
+            if(!(abs(currentColumn - pulsante.column) == 1 || abs(currentColumn - pulsante.column) == 0))
+                return;
+            if(!(abs(currentRow - pulsante.row) == 1 || abs(currentRow - pulsante.row) == 0))
+                return;
             pulsante.setBackground(Color.ORANGE);
             char c;
             Ruzzle.caratteriPresi[contatore] = pulsante.getText();
             Ruzzle.lettera.setText(pulsante.getText());
             Ruzzle.parola = Ruzzle.parola + pulsante.getText();
+            currentColumn = pulsante.column;
+            currentRow = pulsante.row;
+            IDKeeper[contatore] = pulsante.ID;
+            contatore++;
 
         }
         else{
@@ -102,20 +108,8 @@ public class ListenerTrascinamento implements MouseListener{
     public void mouseExited(MouseEvent e) {
         
         PulsantiLettere pulsante = (PulsantiLettere) e.getSource();
-        
-        for(int i = 0; i<16; i++){
-            if(pulsante.ID == IDKeeper[i]){
-                //System.out.println("Fora!");
-                return;
-            }
-        }
-        
-        currentColumn = pulsante.column;
-        currentRow = pulsante.row;
-        IDKeeper[contatore] = pulsante.ID;
-        
         System.out.println(IDKeeper[contatore]);
-        contatore++;
+        
         
     }
     

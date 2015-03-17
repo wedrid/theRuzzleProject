@@ -6,6 +6,7 @@
 
 package ruzzle;
 
+import java.awt.BorderLayout;
 import java.awt.Dimension;
 import javax.swing.BoxLayout;
 import javax.swing.JPanel;
@@ -16,17 +17,17 @@ import javax.swing.JPanel;
  */
 public class PannelloLayoutGenerale extends JPanel{
     PannelloLayoutGenerale(){
-        this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
+        this.setLayout(new BorderLayout());
         PannelloGiocoSuperiore pannelloSup = new PannelloGiocoSuperiore();
         //pannelloSup.setPreferredSize(new Dimension(Ruzzle.larghezzaFinestra, 10));
-        this.add(pannelloSup);
+        this.add(pannelloSup, BorderLayout.NORTH);
         
-        this.add(Ruzzle.labelTempo);
+        
         
         Ruzzle.pannelloGioco = new PannelloGioco();
         
-        this.add(Ruzzle.pannelloGioco);
-        this.add(new PannelloBasso());
+        this.add(Ruzzle.pannelloGioco, BorderLayout.CENTER);
+        this.add(new PannelloBasso(), BorderLayout.SOUTH);
     
     
     }

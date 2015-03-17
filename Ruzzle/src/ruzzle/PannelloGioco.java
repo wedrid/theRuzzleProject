@@ -32,17 +32,17 @@ public class PannelloGioco extends JPanel{
         
         
         //QUI!!! Metto gli ID ai pulsanti
-        for(int column = 0; column < Ruzzle.colonne; column++){
-            for(int row = 0; row < Ruzzle.righe; row++){
-                Ruzzle.matrix[column][row] = new PulsantiLettere(caratteri[j]);
-                this.add(Ruzzle.matrix[column][row]);
-                Ruzzle.matrix[column][row].ID = k;
-                System.out.println(Ruzzle.matrix[column][row].ID);
+        for(int row = 0; row < Ruzzle.righe; row++){
+            for(int column = 0; column < Ruzzle.colonne; column++){
+                Ruzzle.matrix[row][column] = new PulsantiLettere(caratteri[j]);
+                this.add(Ruzzle.matrix[row][column]);
+                Ruzzle.matrix[row][column].ID = k;
+                System.out.println(Ruzzle.matrix[row][column].ID);
                 j++;
                 k++;
-                Ruzzle.matrix[column][row].row = row;
-                Ruzzle.matrix[column][row].column = column;
-                Ruzzle.matrix[column][row].setBackground(Color.WHITE);
+                Ruzzle.matrix[row][column].row = column;
+                Ruzzle.matrix[row][column].column = row;
+                Ruzzle.matrix[row][column].setBackground(Color.WHITE);
             }
         }
         

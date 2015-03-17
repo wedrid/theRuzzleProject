@@ -19,6 +19,8 @@ public class PannelloBasso extends JPanel{
         this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
         Ruzzle.lettera = new JLabel();
         Ruzzle.lettera.setText("Lettera");
+        Ruzzle.lettera.setAlignmentX(JLabel.CENTER_ALIGNMENT);
+        Ruzzle.labelParola.setAlignmentX(JLabel.CENTER_ALIGNMENT);
         Ruzzle.labelParola.setText("Parola");
         this.setBackground(Color.CYAN);
         this.add(Ruzzle.lettera);

@@ -15,8 +15,8 @@ import javax.swing.JPanel;
  */
 public class PannelloGiocoSuperiore extends JPanel{
     public PannelloGiocoSuperiore(){
-        this.setPreferredSize(new Dimension(Ruzzle.larghezzaFinestra, 1));
-        this.setBackground(Color.BLUE);
+        this.add(Ruzzle.labelTempo);
+        this.setBackground(Color.CYAN);
     }
     
 }
