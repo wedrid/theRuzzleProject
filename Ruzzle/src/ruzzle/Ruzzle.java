@@ -17,7 +17,7 @@ public class Ruzzle {
     
     //Il numero di righe e colonne dev'essere uguale onde evitare errori matematici
     
-    public static int righe = 5;
+    public static int righe = 4;
     
     public static int colonne = 4;
     
@@ -47,17 +47,21 @@ public class Ruzzle {
     
     public static void main(String[] args) {
         
+        /*try {
+            UIManager.setLookAndFeel("com.seaglasslookandfeel.SeaGlassLookAndFeel");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }*/
+        
+        //FinestraBancoProva bancoProva = new FinestraBancoProva();
+        
         totaleCaratteri = righe * colonne;
         matrix = new PulsantiLettere[righe][colonne];;
         
         tempo = new Thread(new ThreadCountDown());
         tempo.start();
         
-        /*try {
-            UIManager.setLookAndFeel("com.seaglasslookandfeel.SeaGlassLookAndFeel");
-        } catch (Exception e) {
-            e.printStackTrace();
-        }*/
+        
         
         matrix = new PulsantiLettere[righe][colonne];
         caratteriPresi = new String[totaleCaratteri];

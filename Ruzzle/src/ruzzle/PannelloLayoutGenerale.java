@@ -27,7 +27,7 @@ public class PannelloLayoutGenerale extends JPanel{
         Ruzzle.pannelloGioco = new PannelloGioco();
         
         this.add(Ruzzle.pannelloGioco, BorderLayout.CENTER);
-        this.add(new PannelloBasso(), BorderLayout.SOUTH);
+        this.add(new PannelloGiocoInferiore(), BorderLayout.SOUTH);
     
     
     }

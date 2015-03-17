@@ -5,6 +5,7 @@
  */
 package ruzzle;
 
+import java.awt.BorderLayout;
 import java.awt.Color;
 import javax.swing.BoxLayout;
 import javax.swing.JLabel;
@@ -14,17 +15,15 @@ import javax.swing.JPanel;
  *
  * @author grappolini.edoardo
  */
-public class PannelloBasso extends JPanel{
-    public PannelloBasso(){
-        this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
-        Ruzzle.lettera = new JLabel();
-        Ruzzle.lettera.setText("Lettera");
-        Ruzzle.lettera.setAlignmentX(JLabel.CENTER_ALIGNMENT);
-        Ruzzle.labelParola.setAlignmentX(JLabel.CENTER_ALIGNMENT);
+public class PannelloGiocoInferiore extends JPanel{
+    public PannelloGiocoInferiore(){
+        this.setLayout(new BorderLayout());
         Ruzzle.labelParola.setText("Parola");
         this.setBackground(Color.CYAN);
-        this.add(Ruzzle.lettera);
-        this.add(Ruzzle.labelParola);
+        Ruzzle.labelParola.setAlignmentX(JLabel.CENTER);
+        
+        this.add(Ruzzle.labelParola, BorderLayout.CENTER);
+        this.add(Ruzzle.labelTempo, BorderLayout.EAST);
     
     }
     

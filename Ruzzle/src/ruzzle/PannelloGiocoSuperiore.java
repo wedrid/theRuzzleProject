@@ -7,6 +7,7 @@ package ruzzle;
 
 import java.awt.Color;
 import java.awt.Dimension;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 /**
@@ -15,8 +16,16 @@ import javax.swing.JPanel;
  */
 public class PannelloGiocoSuperiore extends JPanel{
     public PannelloGiocoSuperiore(){
+        
         this.add(Ruzzle.labelTempo);
         this.setBackground(Color.CYAN);
+        
+        Ruzzle.lettera = new JLabel();
+        Ruzzle.lettera.setText("Lettera");
+        Ruzzle.lettera.setAlignmentX(JLabel.CENTER_ALIGNMENT);       
+        
+        this.add(Ruzzle.lettera);
+        
     }
     
 }
