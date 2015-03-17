@@ -21,8 +21,8 @@ public class PannelloGioco extends JPanel{
         
         Random r = new Random();
         int j = 0, k = 1;
-        char[] caratteri = new char[16];
-        for(int i = 0; i<16; i++){
+        char[] caratteri = new char[Ruzzle.totaleCaratteri];
+        for(int i = 0; i<Ruzzle.totaleCaratteri; i++){
             caratteri[i] = (char)(r.nextInt(26) + 'A');
         }
         

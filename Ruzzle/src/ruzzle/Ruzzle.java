@@ -15,13 +15,17 @@ import javax.swing.UIManager;
  */
 public class Ruzzle {
     
-    public static int righe = 4;
+    //Il numero di righe e colonne dev'essere uguale onde evitare errori matematici
+    
+    public static int righe = 5;
     
     public static int colonne = 4;
-
-    public static String[] caratteriPresi = new String[16];
     
-    public static PulsantiLettere[][] matrix = new PulsantiLettere[4][4];;
+    public static int totaleCaratteri;
+
+    public static String[] caratteriPresi;
+    
+    public static PulsantiLettere[][] matrix;
     
     public static Finestra finestra;
     
@@ -43,6 +47,9 @@ public class Ruzzle {
     
     public static void main(String[] args) {
         
+        totaleCaratteri = righe * colonne;
+        matrix = new PulsantiLettere[righe][colonne];;
+        
         tempo = new Thread(new ThreadCountDown());
         tempo.start();
         
@@ -52,7 +59,8 @@ public class Ruzzle {
             e.printStackTrace();
         }*/
         
-        matrix = new PulsantiLettere[4][4];
+        matrix = new PulsantiLettere[righe][colonne];
+        caratteriPresi = new String[totaleCaratteri];
         
         finestra = new Finestra();
         
