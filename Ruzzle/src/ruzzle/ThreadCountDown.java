@@ -19,7 +19,7 @@ public class ThreadCountDown implements Runnable{
     private int secondi = 0;
     @Override
     public void run() {
-        for(tempo = 120; tempo > 0; tempo--){
+        for(tempo = 5; tempo >=0; tempo--){
             try {
                 sleep(1000);
             } catch (InterruptedException ex) {
@@ -29,6 +29,9 @@ public class ThreadCountDown implements Runnable{
             secondi = tempo - (minuti*60);
             Ruzzle.labelTempo.setText("Tempo rimanente: " + minuti + ":" + secondi);
         }
+        Ruzzle.bancoProva.add(new SchermataFinale());
+        Ruzzle.bancoProva.validate();
+        Ruzzle.bancoProva.repaint();
     }
     
     

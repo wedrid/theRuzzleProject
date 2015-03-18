@@ -19,10 +19,10 @@ public class ListenerTrascinamento implements MouseListener{
 
     static boolean isPressed = false;
     static int contatore = 0;
-    String stringa = null;
     static int[] IDKeeper = new int[Ruzzle.totaleCaratteri+1];
     static int currentRow = 0;
     static int currentColumn = 0;
+    static int contatoreVettoreParole = 0;
     
     @Override
     public void mouseClicked(MouseEvent e) {
@@ -55,10 +55,12 @@ public class ListenerTrascinamento implements MouseListener{
     @Override
     public void mouseReleased(MouseEvent e) {
         isPressed = false;
-        for(int i = 0; i<Ruzzle.totaleCaratteri; i++){
-            stringa = ""+Ruzzle.caratteriPresi[i];
-        }
+        
         System.out.println(Ruzzle.parola);
+        
+        
+        Ruzzle.parole[contatoreVettoreParole] = Ruzzle.parola;
+        contatoreVettoreParole++;
         Ruzzle.labelParola.setText(Ruzzle.parola);
         for(int row = 0; row < Ruzzle.righe; row++){
             for(int column = 0; column < Ruzzle.colonne; column++){

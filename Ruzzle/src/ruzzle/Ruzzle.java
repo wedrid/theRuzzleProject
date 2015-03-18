@@ -8,6 +8,7 @@ package ruzzle;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.UIManager;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -45,6 +46,10 @@ public class Ruzzle {
     
     public static int larghezzaFinestra = 700;
     
+    public static String[] parole = new String[50];
+    
+    public static FinestraBancoProva bancoProva;
+    
     public static void main(String[] args) {
         
         /*try {
@@ -53,7 +58,7 @@ public class Ruzzle {
             e.printStackTrace();
         }*/
         
-        //FinestraBancoProva bancoProva = new FinestraBancoProva();
+        bancoProva = new FinestraBancoProva();
         
         totaleCaratteri = righe * colonne;
         matrix = new PulsantiLettere[righe][colonne];;
