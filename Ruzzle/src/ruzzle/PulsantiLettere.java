@@ -5,7 +5,6 @@
  */
 package ruzzle;
 
-import java.awt.Color;
 import java.awt.Component;
 import java.awt.Font;
 import java.awt.Graphics;
@@ -31,8 +30,9 @@ public class PulsantiLettere extends JButton{
     public int column = 0;
     private char carattere;
     public PulsantiLettere(char c){
+            this.setFont(new Font("Sans Serif", Font.PLAIN, 20));
             //ImageIcon iconaPulsante = new ImageIcon("pulsante.png");
-            
+            this.setBackground(Ruzzle.colorePulsanti);
             this.setText(""+c);
             carattere = c;
             ListenerTrascinamento listener = new ListenerTrascinamento();

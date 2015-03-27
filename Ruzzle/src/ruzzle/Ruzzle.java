@@ -5,6 +5,7 @@
  */
 package ruzzle;
 
+import java.awt.Color;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.UIManager;
@@ -50,6 +51,12 @@ public class Ruzzle {
     
     public static FinestraBancoProva bancoProva;
     
+    public static SchermataFinale finale;
+    
+    public static SchermataIniziale schermataIniziale = new SchermataIniziale();
+    
+    public static Color colorePulsanti = Color.CYAN;
+    
     public static void main(String[] args) {
         
         /*try {
@@ -58,14 +65,10 @@ public class Ruzzle {
             e.printStackTrace();
         }*/
         
-        bancoProva = new FinestraBancoProva();
+        //bancoProva = new FinestraBancoProva();
         
         totaleCaratteri = righe * colonne;
-        matrix = new PulsantiLettere[righe][colonne];;
-        
-        tempo = new Thread(new ThreadCountDown());
-        tempo.start();
-        
+        matrix = new PulsantiLettere[righe][colonne];      
         
         
         matrix = new PulsantiLettere[righe][colonne];

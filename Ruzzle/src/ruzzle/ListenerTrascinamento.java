@@ -64,7 +64,7 @@ public class ListenerTrascinamento implements MouseListener{
         Ruzzle.labelParola.setText(Ruzzle.parola);
         for(int row = 0; row < Ruzzle.righe; row++){
             for(int column = 0; column < Ruzzle.colonne; column++){
-                Ruzzle.matrix[row][column].setBackground(Color.WHITE);
+                Ruzzle.matrix[row][column].setBackground(Ruzzle.colorePulsanti);
             }
         }
     }

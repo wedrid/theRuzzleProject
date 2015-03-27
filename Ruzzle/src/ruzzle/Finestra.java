@@ -5,6 +5,8 @@
  */
 package ruzzle;
 
+import java.awt.BorderLayout;
+import java.awt.Color;
 import javax.swing.Box;
 import javax.swing.BoxLayout;
 import javax.swing.JFrame;
@@ -15,17 +17,21 @@ import javax.swing.JFrame;
  */
 public class Finestra extends JFrame{
     
-    
-    
     public Finestra(){
-        Ruzzle.genLayout = new PannelloLayoutGenerale();
+        
+        
+        this.setUndecorated(true);
+        this.setBackground(Color.RED);
+        this.setLayout(new BorderLayout());
+        this.add(new ChiudiMinimizza(), BorderLayout.NORTH);
+        this.add(Ruzzle.schermataIniziale, BorderLayout.CENTER);
         this.setTitle("Ruzzle");
         this.setSize(Ruzzle.larghezzaFinestra, 700);
         this.setLocation(50, 50);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
         
-        this.add(Ruzzle.genLayout);
+       
         //this.setResizable(false);
         
         

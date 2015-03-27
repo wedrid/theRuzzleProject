@@ -15,8 +15,10 @@ import javax.swing.JFrame;
 public class FinestraBancoProva extends JFrame{
     FinestraBancoProva(){
         this.setSize(Ruzzle.larghezzaFinestra, 700);
-        //this.add(new SchermataFinale());
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        
+        this.add(new ChiudiMinimizza());
+        
         this.setVisible(true);
     }
     

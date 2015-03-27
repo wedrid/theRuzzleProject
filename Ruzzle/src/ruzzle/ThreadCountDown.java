@@ -5,6 +5,8 @@
  */
 package ruzzle;
 
+import java.awt.BorderLayout;
+import java.awt.Font;
 import static java.lang.Thread.sleep;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -19,6 +21,7 @@ public class ThreadCountDown implements Runnable{
     private int secondi = 0;
     @Override
     public void run() {
+        Ruzzle.labelTempo.setFont(new Font("Sans Serif", Font.PLAIN, 15));
         for(tempo = 5; tempo >=0; tempo--){
             try {
                 sleep(1000);
@@ -29,9 +32,10 @@ public class ThreadCountDown implements Runnable{
             secondi = tempo - (minuti*60);
             Ruzzle.labelTempo.setText("Tempo rimanente: " + minuti + ":" + secondi);
         }
-        Ruzzle.bancoProva.add(new SchermataFinale());
-        Ruzzle.bancoProva.validate();
-        Ruzzle.bancoProva.repaint();
+        Ruzzle.finestra.add(Ruzzle.finale = new SchermataFinale(), BorderLayout.CENTER);
+        Ruzzle.finestra.remove(Ruzzle.genLayout);
+        Ruzzle.finestra.validate();
+        Ruzzle.finestra.repaint();
     }
     
     

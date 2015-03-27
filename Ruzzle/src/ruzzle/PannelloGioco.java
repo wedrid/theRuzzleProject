@@ -28,7 +28,7 @@ public class PannelloGioco extends JPanel{
         
         this.setLayout(new GridLayout(Ruzzle.colonne, Ruzzle.righe, 30, 30));
         //this.setSize(600, 600);
-        this.setBackground(Color.GRAY);
+        //this.setBackground(Color.WHITE);
         
         
         //QUI!!! Metto gli ID ai pulsanti
@@ -42,7 +42,6 @@ public class PannelloGioco extends JPanel{
                 k++;
                 Ruzzle.matrix[row][column].row = column;
                 Ruzzle.matrix[row][column].column = row;
-                Ruzzle.matrix[row][column].setBackground(Color.WHITE);
             }
         }
         
